@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="shortcut icon" href="{{url_for('static', filename='booksearch.jpg')}}" />
+        <link rel="background img" href="{{url_for('static', filename='books.jpg')}}" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        </head>
+    <body>
+        <div class ="container">
+        <table width="100%" height="30%" align="left" cellpadding="4" cellspacing="2" style="border:none;">
+            <tbody><tr><td width="25%" align="right">Customer ID:</td>
+            <td width="75%" align="left"><input type="text" id="customerid" name="customerid"></td>
+            </tr>
+             <tr><td align="right">Phone number:</td><td align="left"><input type="text" id="phone" name="phone" value=""></td></tr>
+             <tr>
+               <td align="right">&nbsp;</td>
+               <td align="left">
+                <input type="button" value="Submit" onclick="SubmitForm();"></td>
+             </tr>
+             </tbody></table>
+            </div>
+    </body>
+</html>

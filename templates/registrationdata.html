@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+   <body style="font-size: large;">
+    Registration successful<br>
+    Registered user email id is below:
+      <table border = 1>
+         {% for key, value in registrationdata.items() %}
+            <tr>
+                {% if key == "email" %}
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+               {% endif %}
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html>

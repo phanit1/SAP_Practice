@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+   <body style="font-size: large; text-align: center;">
+    <h1 style = "text-align:center">Book Search Results</h1><br>
+      <table border = 1 align = "center">
+         <th> {{ "Isbn" }}</th>
+         <th> {{ "Title" }}</th>
+         <th> {{ "Author" }}</th>
+         <th> {{ "Year" }}</th>
+         <th> {{ " Link to Book" }}</th>
+            <tr>
+               {% for item in bookss %}
+               <td>{{ item}} </td>
+               {% endfor %}
+               <td><a href = "#">View Book</a></td>
+            </tr>
+      </table>
+   </body>
+</html>

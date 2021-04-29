@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="shortcut icon" href="{{url_for('static', filename='reg.png')}}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style>
+  body{
+    background-image: url('static/bookreg1.jpeg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    color: white; 
+    font-family: Arial, Helvetica, sans-serif;
+  }
+</style>
+</head>
+<body>
+<form action = "/registration" method = "POST">
+  <div class="container" style = "text-align: center;">
+    <br>
+    <br><br>
+    <h1><b>Registration Form</b></h1>
+    <br>
+    <hr>
+    <div class = "row justify-content-center" >
+      <div class="col-lg-4">
+        <label for="email"><h2>Email</h2></label>
+        <input class="form-control" type = "email" name = "email" required>
+      </div>
+   </div><br>
+   <div class ="row justify-content-center">
+      <div class="col-lg-4">
+        <label for="psw"><h2>Password</h2></label>
+        <input class="form-control" type="password" name = "psw" required>
+      </div>
+ </div><br>
+      <div class = "row justify-content-center">
+      <div class="col-lg-4">
+        <label for="psw-repeat"><h2>Confirm Password</h2></label>
+        <input class="form-control" type="password" name ="psw-repeat" required>
+      </div>
+    </div>
+    <hr>
+    <br>
+    <button type="submit" class="btn btn-success btn-lg"><b>Register</b></button>
+    <button type="submit" class="btn btn-success btn-lg" formaction = "http://127.0.0.1:5000/auth"><b>Login</b></button>
+  </div>
+</form>
+{% if var1 %}
+<div class = "container" style="text-align: center;">
+<div class="alert alert-success alert-dismissible">
+<a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+{{var1}}
+</div>
+</div>
+{%endif%}
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+   <body style="font-size: large;">
+    <h1 style = "text-align:center">All Registered Users</h1><br>
+      <table border = 1 align = "center">
+         <th> {{ "Emailid" }}</th>
+         <th> {{ "Password" }}</th>
+         <th> {{ "TimeStamp" }}</th>
+         {% for item in admin %}
+            <tr>
+               <td> {{ item.emailid}} </td>
+                <td> {{ item.password}} </td>
+                <td> {{ item.timestamp }}</td>
+               <!-- <td> {{ value }} </td> -->
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html>
